@@ -1,52 +1,115 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | Netflix Pakistan</title>
-    <link rel="stylesheet" href="main.css"/>
-    <script src="app.js"></script>
-  </head>
-  <body>
-    <!-- navbar -->
-    <div class="nav">
-      <div class="nav__left">
-        <h2 class="nav_logo">Flexin</h2>
-      </div>
-      <div class="nav__right">
-        <img src="avatar.png" class="nav_avatar" alt="">
-      </div>
-    </div>
 
-    <!-- banner -->
-    <header id="banner">
-      <div id="banner__contents">
-        <h1 id="banner__title"></h1>
-        <div id="banner__buttons">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Flexin Uruguay </title>
+  <!--CSS-->
+  <link rel="stylesheet" href="main.css" />
+  <!--Javascript-->
+  <script src="app.js"></script>
+  <!--Icono-->
+  <link href='https://css.gg/search.css' rel='stylesheet'>
+</head>
+
+<body>
+  <!-- navbar -->
+  <div class="nav">
+    <div class="nav__left">
+      <h2 class="nav_logo">Flexin</h2>
+    </div>
+    <div class="buscador">
+      
+       <input id="buscador" type="search" placeholder="Search"><button class="search"><i class="gg-search"></i></button>
+       
+    </div>
+    <div class="nav__right">
+      <img src="avatar.png" class="nav_avatar" alt="">
+    </div>
+  </div>
+
+  <!-- banner -->
+  <header id="banner">
+    <div id="banner__contents">
+      <h1 id="banner__title"></h1>
+      <div id="banner__buttons">
         <button id="banner__button">Play</button>
         <button id="banner__button">My List</button>
       </div>
       <p id="banner__description"></p>
-      </div>
-      <div id="banner__fadeBottom"></div>
-    </header>
-
-    <!-- row -->
-    <div id="headrow">
-      <div class="row">
-        <h2 class="row__title"></h2>
-        <div class="row__posters"></div>
-      </div>
     </div>
+    <div id="banner__fadeBottom"></div>
+  </header>
 
-    <script>
-      window.addEventListener("scroll",function(){
+  <!--Botones-->
 
-        var nav = document.querySelector(".nav");
-        nav.classList.toggle("active", window.scrollY > 0);
-      }) 
-    </script>
-  </body>
+  <!-- row -->
+  <div id="headrow">
+    <div class="row">
+      <h2 class="row__title"></h2>
+      <div class="row__posters"></div>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener("scroll", function () {
+
+      var nav = document.querySelector(".nav");
+      nav.classList.toggle("active", window.scrollY > 0);
+    })
+  </script>
+  <br>
+  <fotter class="footer">
+    <div class="divisor">
+      <div class="footer-info">
+        <p>Preguntas? Llama <a href="+598999999">+598999999 (UY)</a></p>
+        <ul class="footer-links">
+
+          <div class="21">
+            <li class="footer-links_item"><a href="#">Preguntas frecuentes</a></li>
+            <li class="footer-links_item"><a href="#">Prensa</a></li>
+            <li class="footer-links_item"><a href="#">Formas de ver</a></li>
+            <li class="footer-links_item"><a href="#">Preferencias de cookies</a></li>
+            <li class="footer-links_item"><a href="#">Prueba de velocidad</a></li>
+          </div>
+          <div class="2">
+            <li class="footer-links_item"><a href="#">Centro de ayuda</a></li>
+            <li class="footer-links_item"><a href="#">Relaciones con invercionistas</a></li>
+            <li class="footer-links_item"><a href="#">Terminos de uso</a></li>
+            <li class="footer-links_item"><a href="#">Información corporativa</a></li>
+            <li class="footer-links_item"><a href="#">Avisos legales</a></li>
+          </div>
+          <div class="3">
+            <li class="footer-links_item"><a href="#">Cuenta</a></li>
+            <li class="footer-links_item"><a href="#">Empleo</a></li>
+            <li class="footer-links_item"><a href="#">Privacidad</a></li>
+            <li class="footer-links_item"><a href="#">Contáctanos</a></li>
+            <li class="footer-links_item"><a href="#">Solo en Flexin</a></li>
+          </div>
+
+        </ul>
+
+      </div>
+      <p>
+        &copy;Flexin Uruguay by Matea 2021
+      </p>
+      <div class="social">
+        <a href="https://www.facebook.com/matea.social/">
+          <img src="https://cdn-icons-png.flaticon.com/128/174/174848.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/matea.social/?hl=es-la">
+          <img src="https://cdn-icons-png.flaticon.com/128/174/174855.png" alt="Instagram">
+        </a>
+        <a href="https://www.youtube.com/watch?v=TWsN2ZrmibU">
+          <img src="https://cdn-icons-png.flaticon.com/128/174/174883.png" alt="Youtube">
+        </a>
+      </div><br>
+
+    </div>
+  </fotter>
+
+</body>
+
 </html>

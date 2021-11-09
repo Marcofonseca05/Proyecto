@@ -15,6 +15,30 @@ body{
   background-color: white;
   border-radius: 10px;
 }
+/*/
+Parte del buscador, (Input),(Icono).
+/*/
+
+
+
+.buscador{
+  padding-right: 7.2rem ;
+  
+}
+.search{
+  border: rgba(255, 0, 0, 0.426) ridge 1.2px;
+  background-color: rgb(255, 238, 238);
+  padding: px;
+  color: rgb(0, 0, 0);
+  
+}
+.buscador input{
+  border: rgba(255, 0, 0, 0.426) ridge 1.2px;
+  background-color: rgb(255, 238, 238);
+  padding: 4px;
+  color: rgb(0, 0, 0);
+  
+}
 .nav{
   position: fixed;
   top: 0;
@@ -148,4 +172,57 @@ body{
   transform: scale(1.09);
   opacity: 1;
 
+}
+
+/* FOOTER DE TODA LA PAGINA*/
+
+.divisor{
+  background-color: rgba(0, 0, 0, 0.268);
+  text-align: center;
+  padding-top: 1.4rem;
+  
+}
+.footer{ 
+  color: rgba(255, 235, 205, 0.514); 
+  margin: 0;
+  height: 10vh; 
+}
+.footer-info{
+ justify-content: space-between;
+}
+.footer ul{
+  display: inline-flex;
+  list-style: none;
+  padding:20px ;
+  
+}
+.footer-links{
+  padding: 70;
+  min-height: 10px;
+}
+.footer a{
+  text-decoration: none;
+  padding: 10px;
+  color: rgba(255, 235, 205, 0.514);
+   
+}
+.footer a:hover{
+  text-decoration: underline;
+  color: red;
+}
+#lenguage{
+  background-color: rgba(0, 0, 0, 0.74);
+  color: rgba(255, 255, 255, 0.418);
+}
+.social a{
+  
+  padding: 30px; 
+  margin: 0px;
+}
+.social img{
+  width:20px;    
+}
+.social img:hover{
+  transform: scale(1.4);
+  transition: 0,5s;
 }
