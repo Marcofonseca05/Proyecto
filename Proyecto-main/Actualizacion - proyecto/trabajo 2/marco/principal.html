@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="principal.css">
+  <title>Flexin</title>
+</head>
+
+<body>
+    <header>
+    <div class="navbar">
+      <div class="contenedor">
+        <h2 class="logo">Flexin</h2>
+        <nav>
+          <a href="">Inicio</a>
+          <a href="#series">Series</a>
+          <a href="#peliculas">Peliculas</a>
+          <a href="#Lista">Mi lista</a>
+          <span id="cargar"></span>
+          <a href="">
+          <span id="result" style="color: aliceblue;"></span></a>
+          <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" class="avatar" alt="">
+    <script>
+      document.getElementById("result").innerHTML=localStorage.getItem("primeritem");
+      </script>
+        </nav>
+      </div>
+  </header>
+
+  <main>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="Juegocalamar.html">
+            <img src="https://wallpapercave.com/wp/wp9939661.jpg" class="d-block w-100" alt="..." width="100px"
+              height="650px"></a>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Squid Game</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a href="Juegocalamar.html">
+            <img src="https://www.sonica.mx/u/fotografias/m/2021/9/22/f1280x720-11346_143021_5050.jpg" alt="..."
+              width="1500px" height="650px"></a>
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a href="Juegocalamar.html">
+            <img src="https://www.24-horas.mx/wp-content/uploads/2021/09/Agregar-un-titulo-3.png" alt="..."
+              width="1500px" height="650px"></a>
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div><br>
+  </main>
+  <section id="peliculas">
+    <div class="contenedorseries">
+      <div class="contenedor-titulo-co">
+        <h3>
+          Peliculas para ti
+        </h3>
+      </div>
+    </div>
+    <div class="contenedor-principal">
+      <div class="galeria">
+        <div class="galeria-de-imagenes">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://pics.filmaffinity.com/Son_como_ni_os-567297059-large.jpg"
+              alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <!--<a href="#"><img src="https://pics.filmaffinity.com/Son_como_ni_os-567297059-large.jpg" alt=""></a>
+ <!-->
+          <a href="#"><img
+              src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBISEgoSEhILCwoMDw8QDw8PDxELCwkPJCEmJiQhIyMbIi0kKR0qHyMjJTclKi4xQjQ0GiM6Pzo2Pi0zNDEBCwsLEA8QGxESGjMhIiEzMzEzMTExMTMzMzMxPjEzMTMzMzMxMzMzMTMxMzMzMzMzMzEzMTM8MTMzMTMxMTMxM//AABEIAQAArQMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAEBQMGAAIHAQj/xABAEAACAQIDBQUFBgMIAgMAAAABAgMAEQQSIQUiMTJBBhNRYXEjQoGRoRRSscHR8DNiciRDU4KSouHxFXQHJbL/xAAcAQACAwEBAQEAAAAAAAAAAAACAwAEBQEGBwj/xAAyEQACAgEEAQIDBgUFAAAAAAABAgARAwQSITFBBVETYXEUIjKRobEGFSMzgSQ1UsHR/9oADAMBAAIRAxEAPwAHu687v1pjhIM0kK2Dh3RcpOVWueF+lW99lRi7CKLOseIIUJu5lYW0628etauTIEIBHcwcOM5ATfUoQgNyLNmHEW3q8aIjiCp8CMtdFfBKJJnCL3jmQM+XeyhBpeh59moxkHdRvIUQK7jNG25fLfip63pQzjyJYOmocNKDkrZYieALHwAzVf02PDeMd3HlV1Vd3+IuS+vjrQmGwiJisLkVYxJg87BBlXNrrUGcG6EA6cgiz2alM7htd17rxGXlrwwkAEhgp4EjdauiwYfeZt3JMsCXY5WkGUnXxOtJO0EDJDgVtLlVIwTb2NwD/v8AyrqZtzAVOvg2qTfUqmShcem6n9VM8lB7STdT+r8qZnSkMf6M2/WY1+cWWrLUw2MB9owQIUhpogQRmXVhV2fY8Tri2eCFWJxTo4UtJJlewN7bvp141lVPoGq1IwOFK3c5zastXSpdjYe8vsIB3byqoC7uUIG1+NZ/4XDXY9xHI0rohVEXdBS+lyAuut6m2Vv5kn/Ezm6oSQBck8ABmr3uW1GV7gXIytu1dfs8UeM2JHHHGjGNZHdeaS6ka/K9/OnMmHJL6Es+HcKrD27Wfr5ai1TbO5NftoheCL5/Kcx7h9/dksnNut7P1rDC33Xtu+63XhXTcVG+aTuRC7nFOJA5ZY8vd+8R8PpWy4VXjjUAmQps5n/w8oe+nyP0qbYr+Y0ASs5gYWF91wRqbq27Wd029uvZeY5W3a6icKrPI75DHNEsJZSrLo7KNf8AMKjnwRKbRj3B9pfFMAT7RiFUCw68Km2QepWa2TmTRsL3DLY2Nwy5a1y1fu2cSDDyMv8AE7+JXH8wQkfQiqHlqVNHS5PjY9+2uallAtbiCNQRU32mS9+8lzWIvnbrxqKstXoSoPYnx4Ow6Mk+0Sa+0l1NzvtvNw/Cs7+Te35N4WbfbeHgajrK5sX2k+I/vJBPJub8m5om+3s/TwrwSvdTnkzKuUNnbMq+HpWlqypsX2k3t7yX7RJu+0lspuoztu1rJK7ABnkdQbgM7MtaVlTavtJvb3nmWl+1lskf9f5GmVL9r8kf9f5Glagf0zNn+Hudfi+sUq1iCLqwNwR7rUQcdKbjvcQQb3Bkfr8aGrKxp9lbDjb8QBhJxsuvtJjfU+0fe6eNefbJN72k28tm333h4HXUVHksMzZgvkKyTFRxhGyhkJylic2VvSuFgJlajXaTESpFkewmxne6vnkzoAqvmbMg8Aelbfa5cwbvJ86iwfO+dR4XvUEu2CRb2e5cgBd3J4j9DSzEbXks29YZjfKF3mrgf5Sg/rWGv7X7dRyuKkAcB5Qr6sA5yyevjWy42UcJJxoBpI/AcBxpLDjpTvElU3d1VX18hej0xOdrWRr9VO8v0t9a7vEPD6vpmamSgfPcK+1yWy95Lkve2dsvG/C/jrWHGS3B7yYst7HO+Zb8etethHFvA8CN5W+I0odlIJBuCOhogQepsYTpst7KMlfEOwYM8jhjchmLKxta587VHXgr2uS0MarwBLJWVlZXoJ+fZlqy1ZWVySZWVlq9qSTyvaysrsk8pftfkj/r/I0woDbHIn9f5Gk6j+2Zt/w7/uGL6xRetlU6aZmbl0qOSZUGZstumY5fw1NSYfGZ7BEjB3gudM308aw3auBPpfqfqSpeJDz5PtJFiybzrInVSV/MUNMiSZwm676bmbLJ14H8q3ZJSxEbkuOITlX4cKITYmMYAhVF/eC5W+lKseZ5cgnxEL4N43IN0XLmR+aPXiPSoEiGWM2Jys2cDeXrarTNsfGAHOA+bU/1eNLo9myqZNw5XBDLl6661A4gHGfAiR2kLKti5tcoN30vRy4to1jVSIGbNfIO6ZU9bE+NFSQSozPka75tLZczdL+lzQGIw7PfOGTLYWvzV24JUrHGzsSCR/acRnOlmdmjb8NPjR+IAYhWsHC6OqZY2+N7fWqg5EVgu9IQu8F7zu/h1NGYLGyXuJsZm+6UWSNvgGFQWORHYNQ+FgVNGNnQqbG48LjLWtTiSR1OcZkBsXsytG3Hrrby+VQnTSmo1ie29P1o1CWfxDsSyVlV9doM6yHeSINkZr5pE6j14GjtlzEgjflDG5c8v78q3w4PU+HtiKizGVZWVlHFTBWVlZUknteV7WVySZS/bHIn9f5GmFLtsGyJfQB7n5Gkaj+202fQWC67Gx8H/qKjs5HbMzqzKAFTL/C8aO2HsfvZJFXWMbrMp/h+OvjSvD4hjfL7NWLZsvN866H2Ngy4cnTM7NevP5GIFz1bsMmRm9yTD9nbMjgUJGir4tbeapZoT5AUWDXjnTzqt33Gg11FEyML+FASp8KcTAa+lKsQbE1IxYI6/EedDS4JHvujMeoostW0JF+lTcR1CZQRzKtjOz+ugJHU2pLH/Z3JO7bl0XMzeH7NdMSzXGlqpfarA77XCqrC6kU7G5PBlLLiCjcJDDtjEZrezeNhcIN2WMdbCwNvmKK7tZwrpZQBYgcAaS4XGmNCrKcQoNhnyqsbdNTw4eIow7QjUliHiL8VK3ZSPHhrw166UXIPELTalsRtTGsuAUPGt29qWzX8AP8AmmGGw6xqVXRb3tWri8kf8qOfwqVnsLnQeNeoAAnz9nZgAZ7WV4De3AjxrHYAEkhVGpJ92oSALMFVLGgOZ7Xha3lSXH7dCXEYzEaFmOWkGJ2w7HUuzHgFbNl+FUsmsVTQ5mli9NZhbGv3l4Ei+IrbNVP2Wk8huTaMdC65vxpxmdPeb1FCus9xGN6V7GOKX7ZPs08m/I0BiMY6A3LDrun60Km184KveWMG403l8x4+lBl1SspWu5c9O0XwdQMjHgdxfg8UC3mD15a6v2WUjDQFtGcFrfdUmuPRYdrvIqOYu8yK29lZjY29bWrqxbELHho4e7jCRxqzv426VkZRdCbuG+ZYb61kgNc/xkGMBdvtscZU8vesv/VbbM2/jYjaTLjsODvOhVpFXxuPzpfw+ODGfEINES2zE60txAN6Y/aRIiONEYX1qt7Z253RIC5ntcUIUk0I/eFFmEshqMXBNVKbbeOkYZN0HgAn61JFtLGxspkj7yM8wC5vwovhmL+0KfBl5wfDzpP2iTM0fCyqS5bly/8AdMNj7QSVdNx+qMMuX0pV2zUiPMCRnXJe/vEiuKCGqTIQVJErEDgZyoQrILMj5e7kX4/90bDhYmG60cQXQxzqS0PkCTcj1pVZLqmb2gFiVP4g8R5UYxaygFAFFrSRfacvoeNvLXyp8pCWbN7Rz0SMfUmgJMUrs+UscOUIfTkamMQu0x/mC/IUI2EKjFNe5kW9gOtemM8UhFzzAqVJ32kXKLC+7GviaE2tiGIPERg6LfdkPiaZYlu7QhmuAMzt73pVOd5sZLlS6QA2AHvLWRqtTuO0dCeh0Wj2Dcw5P6QDGSF2soJN7WJ/KmuzdmiL2jhXktcKeVV8vE1ZNldmVQAsC0lr5mGbWvNsbNIDcMjboFstURkBNTS+CR94xHPjSCSm5k3igG7k8f1/YoiHE51a9wBzgHNkvqGHl1+fgKUwMQyKbZlLoVb3r/8ANTYY925sbxrY6jmib8wdfnTA0XDgTeSN8uq3Rwd398P2KQ4tCjNxABswty+fzp462MiDKzRnPF93UaD06elLdoMGVXXVXWxvzeX6et64TO7eIb2fkdysV80bSR7h3lzk2DfKuobRSR4zHGyxki2Y+7XKexkv9rhQ6iR0/wBQ1H4muyd2Cvwqtl4YS9pza2ZTNobHcYeRXLTYlmujozRxRJY6BL8QTfrS3s/st45cMUSVirWmdmyqyW0NvW9XaWAE6660ThsKANABfwofiGqjDiAO6DY9wsaAALfpVb2zAEUSKA0lrnSn+PF3A6DSocThw4Om7bgaEGjGlRtqUzAxmaPFS94Iu64IRmkk8wtxoPE0NhMXMEd3DIylQcj94sbG/Ea3Hpwp7PgwC1jZfC1TYWC3up65c1O+IK6iPgkm7m2xJElEcgtHIOJX3qK7SWOHlvx8T96pNn4VVZiFCZui7q5qi7RoTA466H60rdbCGy0pBnPIImdmKL3rWJN95mXzo6PETKAFd4AOKkrb4caYbEch44twq5yuhC+3Q6a+epoHG7Nb2Co+QpEMwLNfma30FPJ5qVRj4sS0YblY/edz9aJRdHY620W/LehMGwKxqt3YjW28q+pqbHTiOMtoI1Vtb83n+/OtrWZtq7R2Z5b0zTfEy7mH3R+8rPaLEl2EaklpCAf5Uq3dkdhokaOygs2uoqk7LjbEYstxXPw5lXWuxYDD5I4xwsKxXPiepTq5G0AtoABSrH4cMsgsNRpTxxSrHG1/Gk+YxeeJyjbMWSU/zG1/qKgjkuL8TGd4feQ8R+/OnHanD7zkaEbyn0/TSq7FJvI3ANusPumrCGxKmRdrRiz7sZvmKbl/ea2qfS4+VA405WZb3jkGdD66n5H8anXg6XsHF1a/xHy1oLFPmjjOoaI2sPdU/obijgnqS9mpcmMwR4e1QH4m1d2wz3UcK+fdlvbEYNvCaI3/AMwrvOFfQeB1qvm4IMt6XlSJmL8qJw4sF1UXHAneqHQm/TpQ+JwscjRuw34tUa+Xu/Ok9y2eRUgxgtIxDIxB8a0kxRVJGcKVC6Ect6UYiEyLM+aSONnYXR2jk+YNCQQOIzHnkeMni5ZpMvqam2dPtN8M+cseNzTTDYfhQuDw+WwGopxho7C9QmFdCTQwBR0vSrbUJkCxjQOd8/dHWm7NpSvaOJSIKXIVpXWJST1N/wAgag74izz3KfhsEzYnOkcv2WKSzOf4a5ePw8Kgx0uZn15XZQw95RYD8L/5qsW3NqpFEI1ZZMQ/RDmWK/vN5+A+NVhRYKNRYcD0qwgLcmO0WmGZ9nY5uWfBMxCLbu2tvkf3UY4n10tSDtNtPvO7ijtlY5E/mby8hR+0MVulblIwmeQjd709F+nyFVTDB58QjKDuXcAe6gGnzNvnTcmVsjFjMTDiXEgRRLF2fweKwYEndrNHzGy94304V0jY+2kxKHKDHIo3kJzZa5/hRMsEjyT42LGI2ZI0izQSJb0te9r6/CnvYvFvI/tUVZ1TV1Ro8626/GluOLMtIPAltmcKGLHKoGpqq7T7R4ZSQWdiPuozUZ2qxgVGTXe4gHeqqxx4YNGGjknkkNgiK0jf80CgHkxhUjkSLaOMhnBEZYyDMyoyMuYW1HyqpYuLIxI1jfX+mrlNtbBxyNG8BgkQ++jKy+fjSTbMCG8kVngkN7e7G1MU7eKici7hd3Ea4joeN+J/u2/StpBzH3ZBY68p8fpQrxcbXBHSpI3Ngp6m28KIn2iF9jIFIV424WcN/SQb13LASB0jOhDKtcNxSWsdQT/tPnXS+wu11lhWMn2sQykHmy9DS8q2tyzpWCsVPmWrEJMDnR1K5TeJ13W8wRqKVYnacyC7RlkPMUKsv1tVgia4tQG0ITlewIB45aQrAcGaCFR3KhPtxwWAjkWK+iiJ/nwqTDbWi4PmiNuLDKv1ol4WZmFyig8MtFJClrMqyLa1nGZaIlZ1h7GSbLxcch3GWRRwK8tN0JBfwOopQkKx5cqhRfgoyrTFJb2pZ74i6PmGKL1Q+3UpknwcC2yxK0jj+Y6fgPrV7ibQAczf7a59ttO8xmLkJKJG+RDbmygDT40eMfeimRmpVFkwbEFFd8tsqZkF/dsLfWlTOSWJ4k0WjaPxAoK1XFFCb2LTDHiVa58xxt5HeO/AsylvkP0pl/8AHOzVk+1ORylVH8v7sK2TD95DGjWtIqgn3lIOWn3/AMd4bu48ch50mUH5UvINrFfYzy2E7lDe4lhTBAaEKVFSZVjB0VbDSwosvqBxJ6UBtQDKu8AG1JNIaW05NGVbbKd6zdRfSttl7LCFJELx4lRpIjb3proR5V7jz3YMgIkhUgsy/dvTrDIMqsNVZb1AxA4hsgMpm29gSySSSEiSWTi7rveX/VAYPY0kQYOQYzxW263wq+4luNKcTDmvXfiE9wVwgG5Q8XsxXZhGcsiamJ95ZF8VPGlDxuCdOHEfxFq17ZwjJZ13WjOYGlmHxUWJID3ixA0zXyt8+voaYGNXK2VFBroxC29cHQdCBy15gMc+HkEkZyPGeHut5Grc2w7IS5UhgpRwFX5/u1U3aUWSSQeAXp++lGrBuJXdWUBp2fsrt2PFxK4skq6SITvI36VYJUUqxOotXF+w0zJMmUlCy2Nve610vFSyhNLSIR7p3qr5EpuJfxOWUE9zyVBdrW9ajVOPClrYuQWusnxWsTaNubMT4Ab1CVMcHEcqlxWyMBoNWPSkn2+SQ2Hs08BzfOmGBU3W+poSKku47w6WHi5rls8zNLKXNlzuB/LxrqcBtlubDiSfdWuadqMEYMRL1jnZ5ImHKyk/lf8ACnYDyZb0DquQlu/EBhYWboSTa9CkVme1hc+prcZepIPkKtTYLbwAfEuGGYFA3uiPX+rOD+tOOyeNRpMaoO+8cD2PM1syn8qT4mLu4znsjOguP8Net/PWknZba2TaA92NkaJbnefqSfj+FKzHc7Ee5ni9KNmNVb2E61C6jeYqGI0ueWhNoMkmUBkLHxNDbVwwZVdbh1OrLzKtVmR2JfOzFRoGQLveFxSALE1MWEP964biNlRgSogWOOR8zom7HIaa7MnGQobB0G6P5apmHnmzkI2l9AvvD0pvhcPiTIGkaNYyNwKuWVT4k3rh47MPJj2+Y4n4+V6hKg286lxQ3rDWw1/qqNTbjQXOXYiTtJEBDIdAVHGuZYM+0PvA5lt979mr/wBuNohIXUc8hygVStjIEHeNYnggPvHxqzj4W5marlwBG8EsoVoyWaBSgKsc28RckHodPmKrO1X3ypOZk3L/AHgDVuOKWOFi38SUvlH3dNT8L29XPhVM1kkZjci5NhRoLNxbi6QdmPuzbZJIj1BUEfSulYnGjJGBq76WrnWzUs8VtbIjH1ub1fsMiuEOl7caXl7lxEKEqfEnSLMovYk+NRzbOW3Tzpph4vQnyrbEJ9KTcaKiVILeVFd+ka5nIAHAX3mpftXHrHcCzSeA3stV9pJJieZY76sd7NRpjLcnqJyZ1X7q8mOMTtx5GyxjPITZF5o4/O3U+dMZNiDEYVlkLPirtIjsd6KQ8fgbAWpfszC5WWw487W5qtmBxCncOVZFGoB5h4im8LwJXx5GDBr5E5HjcM8bujgpIpsynmWoXbl06a8TXUu1mxBiYmMemKiGZCDlaTxW/n+NculjKmxBR1urKeZSPGmq1ib+n1HxRfR8xx2g2q0hZQcuvLzd36+J/Cqe+JMcsbobSRMGB+6wptjDq4Xgmrtfl8r9TSZMM0hdgDlN8p+9alqABPN5WJIAnf8As1jVxWFw0q8JE3h/hsNCPmK8xuxYmLHKl+thl/Cua9hO1f2IPFNn+xyszZgMzYd/G3gRb5V0fBbaw8oYpLHIG4Wb8qTkUjqXcOVqsGjA0wKRk5Qi+YFbB7EHTSsxM/HUWpXPjOOjHzApVEyySSbMOeTU+dA47aCRqSTe3ADmalmJx72NrqKTYjPIeqr1Jo1S+4DvtHEWbexTYhr9Cd0f4aig8PNZk493Gt0Ft1jwv+P0qdh7SRRcoiE/UX+lMMPgjGkbnWNS6sSMysOINuoINPJriZ5BYlol2riyQjcpYZVW+ZVQdPnrWbIhW545nuFP3eOtHba2ah7uSM+zc2A5e7c62IPr0rWSBII2OcPIwyrbd3TxIpiEVCxMMbF27A4+sO2W6GZAvBUyljytrVmwcgVsoYW9ao2xWzNI+mraLfLlUVb8EhPTU6BiyrQZEuRdSzHc3JMtCY1EA1ubdN7NQGNx0klgl44z93+Iw/KtYo9N5gL34czD1raKQahNBex+83xoFxgcyPlZuOoA2zlFjJdnJ5Ad5vU1tHCFuxARQN1BTJcPclr8ONxvWqeDCZ2uRw5EJ+po7iqgUKNYu57uI8oHM1MIFFlIurDlYfxF8/8AipThkuzPJ5ZN2tPtEagWBNtBcq1cM6IxwuKzXR9JB/pdfEULj9iYeZg7xRyPa1yoLfEjjUBlD20JYHRgN5T5UZFLcDMSWGhO6FPpXLqGrFTwZyTHwd2Ei5nuplcf3kh6fC1eNh8iqpt3iq1k+75HxobE4hiI3GpWTMNObrr+Fbfa/aRyMbx5lNr5mYHQ3+tFRgbhczaEAMccqcsqDOAOVhpTzspHmghfqHK/gKWYeE5cXEeRS2X+U2/6+dWLselsJHe+ruR/qoXNLUfiW2B+Ut2GjBVfE1mKwoA4Cidmpex6Ci5471VuXL5lRxOHGulz6UpxiWV7cRVpxsF2sOtB4rZ4CkW4jU0xWgstic7wi2xMZILRlshB9641HxF7edWvDRiINh3yvdc2GZv4eKj6L5OBw+I8KVYjCKkkgbcjkIGce4w4N8DRr41Zo2heyYiJs0b3yqr9R6HjTTzKirtsGQlUyyL7hOVo391h+f71qp7UhKs5zGRCbLf+78qPmxbhyHLIy6Zj73k361A8me99GtYA+9RKSDFZNrLXmebDfmHUG9XLBud3iLC9UrBrkk6hWq7YBeX7x8qY0Tj44jRBy3uR4H3qOhhNjoNeFQwRGw4adKnnk4Iv8Q6G34WoIyYzsSqLY21dvu+F/KtZseEGW5zk2/qoXG4rIESPM8hsAL+9XiFUK2CyzEX05Yzw0/WpUG5uua2aRkijBsCxysy1pJicPHyiaV2HFRReFwVvaPd3vm15V9L1JMiP0F+hy5vjepcICAjGOSMkMlr8WZY831ohXmOpVEJ6d42b42qa9gLhSOGoZqxJCL8libi2YH41y4QnNMPgs0cF7aifQnyuKTtZWfqpbh91uI+dXnFYBIUlIIkgKyNCR7j8Mp+Y+VU1ov4zX1XUD/D6Cuq3MF04FR3gGBErm10hAYj3nBFz/s+tW7YeH7vD4RODFA5H3c29+dVfszhDIgXUrK+Qn+UkFvonzeum4DZQJDvoPdT7opOQ81LmLhQTNsI6oo6k9AMzUSgeQ2RW82bdVfWmEeHRRcgKo8BzeQqDESsQVXcj6Ae960G0DkzpcsaWBSxQRaySF36rGM2X40BNtrB8GjkYeYzfnUO2X7uOSTK8gjF8qfxJG4AC9UfaG3U3L4bGDvGKoQqMrMOgIY6/lrRoCeQILsF/EeZcMU+zplbciDndVWZ4WZvgbVU9vdnitnw5kYqLNG59pbyPW3nSJ9rBsuWHFkMSF3eYjiOPSjNn9o5EygxzSQPE0wXOmZYhcFl16WOnkdKcFMrs6nzE0uIMl0kAE6boZhlaTyPnS9piLrwZOW/4GnnaCVZg0ow+MhkjyF3ZAisrglWOt9QDr5UkkgmcM3cznIyK5CNuuRu+hIFEFiHaz3C9nOZJIxxs1XzZicOANra1Q9lzdyd6LEs6mxtHyta9vlr6VY8N2kVMl8PjSXLKqhFzsygX0vfS4rrD2nEIHcu6vkUnUADhah45Agkka1jmN83u0k2R2iTGO0UaSoUGZ2cIq2v5E1JtCfvpVgTSCLK0pHK2ug+P4XoQIRb2m+HLSM8gGTvMxVmHKh/WneChCDQbxGpvzN+dDIg04rlO6q81F4nEd0oJO8ddeaoTc6BXc3mlCg6gtfUsajjmvxtYaDRVzelLkcysW1CHqRzUcpUWG54jSuVCubSG/gG8L5WY/Ch5ZDfUanrfj9a3kNybWNuIBqJdQOI8gzaVwSXEEu0mYtG4tGwsdd5V8fh+tVhkznu0zZne7G3MBp4/u1FESNdUDEtullOarP2O7PBnMkgLBDwPK5429KG65jgpPHiWLslscRRxsw38u6CPHr8atE08cKmSVlihXQX5pD4AVNFAsaPJJZUjUtlPgPGud9o9sNipFNyIoyQiDlA8fWiwYwzgN5lvS4xnyDEDQ9//ACWWDtRAzO0j92ubLGmVmyL46Diamk7RYQ8Jf9kn6VV22GP/AB64zM2ctky7uXny8eNIzWrj0OByeTxNbF6fp3vax+6SD9RLjjtqYWRWUybpKk5VZW0N/DypKr4aNi0ckubO76nNzCx4r4aeNqUICxRRcu5VVH3mNTY/DNDI0bFWdct8puqki9r/ABqwPTsC8bjZgv6dpiwUnmFDForRsjO7xSSyoWysyu5JJuV01Y/PW9IsQ8cbIO5jPdxSwqb+45JYcOO83zNFLqQOFzR//joXAz52PiGy0vJ6aTRxG/e5Q1ugxYyAp5PvEuG2igKo6ARuiRM2ZWZlWNkW9xrZHI+vGvNtbdkjnLd3G+cQOjMeV482U2ta4zH6eFN5NhYc3sJSfJ81BbQ2VHIEzCRu6uMwO98aWPTcvkj85UHpzsOK/OCp2h7wq0l0fOGupX2igg2OmoNhcdeHDSi8JtaFGRlMplDyyF2OaSRntnucvWy8PAUjn2YyyQpHeQzMqRg8zMSAB9RVi7Odknkx0mDxRfDSRRl2yFJGVrAjXUcGq4dDgxr/AFGO6rNTLzq+JihHIkGzFw0D4yWN5ZJp1eyuMy3Jv4CiNmTCNGLb0srM7jzPS/kLfKhsTgRFPiolJdYZXjUkbzBWIv8ASi4IOGlc+wYKsMeZkZfUciGgBxHGCx8SrmZryH3QjZl08aHZzNItyO7votlVmr3CbLeTvCguIlLsSVXKo4nWvY4LFeNwRScmiwgNtY2ItPVspZQwFExmIsoAGQZfDdy1oXBuTa58d741pPJlGVbZj/uNQhrDUG5PAlt01jT0VySZyApJIHUAZaHkk104fvxqOaYkHUsen8tByONL34ac1SpLjLYmzGIsF7zESixsF9kh4+lX/ZGzUgRBozjW9t1W8qjwOGSFcqDU8zHmkoky1wJXJjHyE8DqL+2c5XBYuxsWEa/5SwFczSI5Ec8JCwX4W/WugdrGL4WRBxleJPm61WNtRqiYRF0VA4/CuNk2EES/6Yayg/WWbY2MEOzMO5RJvbhQrcur2v6i9b4jZsL7UjuilRhO9K2XKzhioJHp+FJIdoxDZ8EOdROs6OVs2ZQJL34W4UfPt+AY+KYP3mHOF7pnVW3DmJ4W9PnTV1AHN9yZEcZGKg8k+8I7SxscHPO8UeGxmDxAMDIFzd2HAU9eIPDxFRdlJg+EleFIcTtMyM06y/xJrte1+l14dL0m7QPhe7l7vEYnF4qWRnAzv3ESlr6g6aDQV52ZbCIsUhnfB4+J99izZJkvwtwsRpXTqR+G/wBYYx/6c3d3xwfy+kRdo8YrTTyLD9iZQA8V+VxxPAWozs3sebFxvMHhw+HR8gaRmXO+nD5ioe3GOjxEuJki3kESoWy5e8cX1/AfCt+x+yUXCNjMU+IlwiyqseERm7uV8wALDrv9PKtXRapvs7ENyDQ4u/lEa12BQ1XHXf7yzdmsFJh9oNDLkY/ZmkVlN0dSQLj5GpIj/YO0/li8b+IphO//ANrhf/Qk/wD3SaB/7B2p/wDcxv5Vze2RgzdmpXGViQx+X7yu9jsZk2ls8ZEkEoePe/urgHMPPd+tXZNo95tsx5Ej+yYaRc6802YIdfSuXbE2gsOLwMz3McMl3sMzKDoT8jV9j2lg12kuLTEI8eIgcSE8sTgKFHC+oBqxrU/qE14r/MpeoZt2Um/IjXa8keIwW02MUUb4fFSRqUC5rq4Ba9uJub0XsCVpVRRhYcNgAmXe32mPQjQacb8b+NV9dpwnCbUjEimSbFyuiWb2iFwQfkKeJtfDF8LJ3roI42QRBH7tL9TYcdLVnkMFqvMzCyFwSR1z1zJdjTCOPagVIyMO85UEcwBawPlu1V8S2bvnNld2d93lW5vYU42fj4wdoo7NHHinlyuFblLN5eBpJi2GWfKSY1zhWO7mUE2PxFGliyfMzM77vhhSKBP7wVGUZibk8df+aj71nYqoCk6kgZtPWhEdpCFW1up3t0VvisemHWy5Gcixb3s3pWdU9Up4m+OljQWLZpF10HLSZ8T5ggE260MZmkZ2Zm3un3uteAKL3BBPgNfjeoBUha+p2Jpq0M/HyoF5+P0qAz9PjXKhCE7UbNHJ1KFHA/pIP5VWNrtn7vUXU6XO616fHEXv4Gq3taMqWXXuzqhHur4fClum7uWcOUo1juDDCOR7lv6q0bDOPu/6q22fiiyspvnQ2P8AMK3kc68flSfgr7S79uyfKCOjC/D50K5t/wB0XK/GgZmrowKfEE6/J8pFO4KSDW7Kw+lEbE7TYrCxSQxmMxMzMudO8aAniV1/G9AO1RZLk2BJ8q1tBmxYFKOtgkH/ADKmXMcjBm5qWFu1mJM0eIPcd/HEYl3G7vITfhfjQLdpJ1ix0QEXd42SSSQlWzZ342104Undj/MPjQUrtvatwq+Nbph0hgPlWqAmxxgVrEFvMUbDjVFtGt6rVfTj1Jotmqrl1rsxI6mdkxK7EkdyzJtdE7u6u2cXBBWjML2mjYkCOXTTitVWcnu4m10ut7VPgIO7DNIQobUIP4jfpSTqWPcrNoMTHkfrLgm3VJsI5GPka9xW0rowYd0rizFjmky+AFVo49yCIw0a8NB+deQwMx3y1AczEVInpuFWDAcj5w99rEApApF+LczN50F9nZ7s53/A0ckCqLjS3jWmbU6BmHAL+9aR9JofWRGLzTQaGh5DqdSfjU7yt1yqOGX3qHyW46X1Gtdkn//Z"
+              alt=""></a>
+
+          <a href="#"><img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bOFaAXmWWXC3Rbv4u4uM9ZSzRXP.jpg"
+              alt=""></a>
+
+          <a href="#"><img src="https://pics.filmaffinity.com/La_mujer_en_la_ventana-585352381-large.jpg" alt=""></a>
+
+          <a href="#"><img
+              src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dont-breathe-2-poster-fotogramas-1625770267.jpeg?resize=480:*"
+              alt=""></a>
+
+          <a href="#"><img
+              src="https://i1.wp.com/noescinetodoloquereluce.com/wp-content/uploads/2021/10/atracadores-la-serie-Poster.jpg?fit=426,597&ssl=1"
+              alt=""></a>
+
+          <a href="#"><img src="https://pics.filmaffinity.com/Kate-435840712-large.jpg" alt=""></a>
+
+          <a href="#"><img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg"
+              alt=""></a>
+
+          <a href="#"><img src="https://es.web.img2.acsta.net/medias/nmedia/18/86/46/05/19945375.jpg" alt=""></a>
+
+          <a href="#"><img src="https://pics.filmaffinity.com/El_ltimo_mercenario-656153999-large.jpg" alt=""></a>
+
+          <a href="#"><img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uWStkK8bq9ixY3fc7y209ZleCoF.jpg"
+              alt=""></a>
+
+          <a href="#"><img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/fYiaBZDjyXjvlY6EDZMAxIhBO1I.jpg"
+              alt=""></a>
+
+          <a href="#"><img
+              src="https://pelispedia.io/storage/9445/conversions/VqbKCGWPRAJdIt3g1tcJceDLTNSMTEMZLRaxGcOj-thumb.jpg"
+              alt=""></a>
+
+          <a href="#"><img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/jVAEVDNdUPRKJ7hJ4zt6lGcLATD.jpg"
+              alt=""></a>
+
+          <a href="#"><img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ApwmbrMlsuOay5rXQA4Kbz7qJAl.jpg"
+              alt=""></a>
+
+          <a href="#"><img src="https://pics.filmaffinity.com/Spider_Man_Homecoming-336093112-large.jpg" alt=""></a>
+
+          <a href="#"><img src="https://pics.filmaffinity.com/Misi_n_de_rescate-965494786-large.jpg" alt=""></a>
+
+          <a href="#"><img
+              src="https://unity-img.tbxapis.com/v0/images/a962480051577432f8b459f609b521a6/content/5c899ab67c2588d0f152761d/d06dc60daba82f6292021663a057549b2260963f/img.jpg?_v=0.2.2"
+              alt=""></a>
+
+          <a href="#"><img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kb4s0ML0iVZlG6wAKbbs9NAm6X.jpg"
+              alt=""></a>
+
+          <a href="#"><img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg"
+              alt=""></a>
+
+          <a href="#"><img src="https://www.themoviedb.org/t/p/w220_and_h330_face/9dKCd55IuTT5QRs989m9Qlb7d2B.jpg"
+              alt=""></a>
+
+          <a href="#"><img src="https://es.web.img3.acsta.net/pictures/17/11/08/09/46/1315249.jpg" alt=""></a>
+
+          <a href="#"><img
+              src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/a12f5a305e8c3735eced18e536bccb28bb8e788f018f78df9bfdbd926db7a0a3._RI_V_TTW_.jpg"
+              alt=""></a>
+
+          <a href="#"><img src="https://pics.filmaffinity.com/De_amor_y_monstruos-679208225-large.jpg" alt=""></a>
+
+          <a href="#"><img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/k0ThmZQl5nHe4JefC2bXjqtgYp0.jpg"
+              alt=""></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Series-->
+  <section id="series">
+    <div class="contenedorseries">
+      <div class="contenedor-titulo-co">
+        <h3>
+          Series recomendadas
+        </h3>
+        <div class="indicadores">
+        </div>
+
+        <div class="contenedor-principal">
+
+
+          <div class="galeria">
+            <div class="galeria-de-imagenes">
+
+              <a href="#"><img
+                  src="https://www.ecestaticos.com/imagestatic/clipping/f63/b5f/f63b5f05644b2aa2769ac09ab40939cf/sex-education-t2-regresa-a-netflix-mas-divertida-fascinante-e-ingeniosa-que-nunca.jpg?mtime=1622550188"
+                  alt=""></a>
+
+
+              <a href="#"><img
+                  src="https://www.lavanguardia.com/files/og_thumbnail/uploads/2020/06/08/5fa91a4501ba5.jpeg"
+                  alt=""></a>
+
+
+              <a href="#"><img src="https://www.formulatv.com/images/series/posters/1500/1537/dest_1.jpg" alt=""></a>
+
+
+              <a href="#"><img src="https://es.web.img3.acsta.net/r_1024_576/pictures/19/10/08/11/04/2148033.jpg"
+                  alt=""></a>
+
+
+              <a href="#"><img src="https://ramenparados.com/wp-content/uploads/2021/09/Hometown-Cha-Cha-Cha-2021.jpeg"
+                  alt=""></a>
+
+
+              <a href="#"><img
+                  src="https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABU9-hZQfmQ58sDCEjQw4FpNHqPDrN8QVyvlPzOiw6P-2hZ074_mhPysT4EF-dcs5Wr7CicIrgoTxWzk8hGATrmahFYXX3PLbvOJ7UuCy-B4liWkPTnKplH44OY_l.jpg?r=3d5"
+                  alt=""></a>
+
+
+              <a href="#"><img
+                  src="https://m.media-amazon.com/images/M/MV5BYmFmNTVjM2ItNDNmNC00NTU3LWIwNDQtNDhlNThhNjE1MDBjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg"
+                  alt=""></a>
+
+
+              <a href="#"><img
+                  src="https://us.hola.com/imagenes/celebrities/2019082827459/salma-hayek-netflix-serie-monarca-mz/0-200-741/salma-hayek-netflix-series-z.jpg"
+                  alt=""></a>
+
+
+              <a href="#"><img src="https://www.formulatv.com/images/series/posters/1400/1426/dest_1.jpg" alt=""></a>
+
+
+              <a href="#"><img src="https://diario24.ar/wp-content/uploads/2021/08/New-Amsterdam-Avis-1024x576-1.jpg"
+                  alt=""></a>
+
+
+              <a href="#"><img
+                  src="https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters:format(jpg)/https://specials-images.forbesimg.com/imageserve/60059a33d3a44c16fff02fde/0x0.jpg"
+                  alt=""></a>
+
+
+              <a href="#"><img
+                  src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/the-witcher-temporada-2-poster-1625917732.jpg"
+                  alt=""></a>
+
+
+              <a href="#"><img src="https://img.fayerwayer.com/sites/9/2020/12/05/memenetflixsimpsons-1.jpg" alt=""></a>
+
+
+              <a href="#"><img
+                  src="https://occ-0-1722-92.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABe1BG2UPFboUCtdFm1bZkdN1k8eyAeEK5tVKLXXSSBeLLlUFiWWTUUZGxXHZZjaB6hs9xZU18mq7JNOr0cGao5oqKhARxA0sGdR07xQxgyItY4JFWB7ryw7DsqhDZQ.jpg?r=c25"
+                  alt=""></a>
+
+
+              <a href="#"><img src="https://pics.filmaffinity.com/lucifer_tv_series-302368528-large.jpg" alt=""></a>
+
+
+              <a href="#"><img src="https://bonitanetworkmedia.s3.amazonaws.com/2020/07/Game-of-Thrones-temporadas.png"
+                  alt=""></a>
+
+
+              <a href="#"><img
+                  src="https://www.elespectador.com/resizer/lXSUASBqHHs7najMSKimRyn2MgM=/1200x675/filters:format(jpeg)/cloudfront-us-east-1.images.arcpublishing.com/elespectador/FQREIWXQNBEGTMXVV2E26YWT5U.jpg"
+                  alt=""></a>
+
+
+              <a href="#"><img
+                  src="https://gestion.pe/resizer/EGDcC-ERQ2EF5-eNC9H8m9jdnfY=/980x0/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/N4HOVGJOD5DUBCGTYZPTQF5VV4.jpg"
+                  alt=""></a>
+
+
+              <a href="#"><img src="https://pm1.narvii.com/6750/3f8e570323c55c3ff08ba3f3f3aed15e2a9134a8v2_hq.jpg"
+                  alt=""></a>
+
+
+              <a href="#"><img src="https://atomosnews.com/wp-content/uploads/2021/08/COBRA-KAI.jpg" alt=""></a>
+
+
+              <a href="#"><img src="https://es.web.img3.acsta.net/pictures/16/11/23/19/25/592195.png" alt=""></a>
+
+
+              <a href="#"><img
+                  src="https://mui.today/__export/1633025029524/sites/mui/img/2021/09/30/juego-calamar.jpeg_132043147.jpeg"
+                  alt=""></a>
+
+
+              <a href="#"><img src="https://pics.filmaffinity.com/Sky_Rojo_Serie_de_TV-241402991-large.jpg" alt=""></a>
+
+
+              <a href="#"><img src="https://pbs.twimg.com/media/Dylw1DeX4AIka6_.jpg" alt=""></a>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Top 10 Series-->
+  <h2>Top 10 Series Más vistas</h2>
+  <section id="contenedor">
+    <div class="video-wrapper">
+      <video loop data-play="Hover"
+        poster="https://www.tonica.la/__export/1632527858623/sites/debate/img/2021/09/24/creador-de-squid-game-revela-si-habra-una-segunda-temporada_1.jpg_1037907269.jpg"
+        height="200px" width="200px" muted="muted">
+        <source src="Videos/El juego del calamar (EN ESPAÑOL) _ Tráiler oficial _ Netflix.mp4" type="video/mp4">
+      </video>
+      <img class="cover-img hidden"
+        src="https://www.tonica.la/__export/1632527858623/sites/debate/img/2021/09/24/creador-de-squid-game-revela-si-habra-una-segunda-temporada_1.jpg_1037907269.jpg"></img>
+    </div>
+    <script type="text/javascript">
+      var vid = document.getElementsByTagName("video");
+      [].forEach.call(vid, function (item) {
+        item.addEventListener('mouseover', hovervideo, false);
+        item.addEventListener('mouseout', hidevideo, false);
+      });
+      function hovervideo(e) {
+        var coverImg = e.target.parentNode.children[1];
+        coverImg.classList.add('hidden')
+        this.play();
+      }
+      function hidevideo(e) {
+        var coverImg = e.target.parentNode.children[1];
+        coverImg.classList.remove('hidden')
+        this.pause();
+      }
+    </script>
+    <div class="video-wrapper">
+      <video loop data-play="Hover"
+        poster="https://static.wikia.nocookie.net/netflix/images/3/3e/Hometown_Cha-Cha-Cha.jpg/revision/latest/top-crop/width/360/height/450?cb=20210831025355"
+        height="200px" width="200px" muted="muted">
+        <source src="Videos/Hometown Cha-Cha-Cha _ Unofficial Trailer.mp4" type="video/mp4">
+      </video>
+      <img class="cover-img hidden"
+        src="https://static.wikia.nocookie.net/netflix/images/3/3e/Hometown_Cha-Cha-Cha.jpg/revision/latest/top-crop/width/360/height/450?cb=20210831025355"></img>
+    </div>
+    <script type="text/javascript">
+      var vid = document.getElementsByTagName("video");
+      [].forEach.call(vid, function (item) {
+        item.addEventListener('mouseover', hovervideo, false);
+        item.addEventListener('mouseout', hidevideo, false);
+      });
+      function hovervideo(e) {
+        var coverImg = e.target.parentNode.children[1];
+        coverImg.classList.add('hidden')
+        this.play();
+      }
+      function hidevideo(e) {
+        var coverImg = e.target.parentNode.children[1];
+        coverImg.classList.remove('hidden')
+        this.pause();
+      }
+    </script>
+    <div class="video-wrapper">
+      <video loop data-play="Hover" poster="https://pics.filmaffinity.com/the_witcher_tv_series-330642357-large.jpg"
+        height="200px" width="200px" muted="muted">
+        <source src="Videos/The Witcher _ Tráiler principal _ Netflix.mp4" type="video/mp4">
+      </video>
+      <img class="cover-img hidden" src="https://pics.filmaffinity.com/the_witcher_tv_series-330642357-large.jpg"></img>
+    </div>
+    <script type="text/javascript">
+      var vid = document.getElementsByTagName("video");
+      [].forEach.call(vid, function (item) {
+        item.addEventListener('mouseover', hovervideo, false);
+        item.addEventListener('mouseout', hidevideo, false);
+      });
+      function hovervideo(e) {
+        var coverImg = e.target.parentNode.children[1];
+        coverImg.classList.add('hidden')
+        this.play();
+      }
+      function hidevideo(e) {
+        var coverImg = e.target.parentNode.children[1];
+        coverImg.classList.remove('hidden')
+        this.pause();
+      }
+    </script>
+    <div class="video-wrapper">
+      <video loop data-play="Hover"
+        poster="https://larepublica.pe/resizer/YwpGwOzw36YIS8_FoJ0ZZzd7N2o=/1250x735/top/smart/cloudfront-us-east-1.images.arcpublishing.com/gruporepublica/HC325CHWX5DXZKMBGYW5PRJ52Y.jpg"
+        height="200px" width="200px" muted="muted">
+        <source src="Videos/Riverdale _ Official Trailer [HD] _ Netflix.mp4" type="video/mp4">
+      </video>
+      <img class="cover-img hidden"
+        src="https://larepublica.pe/resizer/YwpGwOzw36YIS8_FoJ0ZZzd7N2o=/1250x735/top/smart/cloudfront-us-east-1.images.arcpublishing.com/gruporepublica/HC325CHWX5DXZKMBGYW5PRJ52Y.jpg"></img>
+    </div>
+    <script type="text/javascript">
+      var vid = document.getElementsByTagName("video");
+      [].forEach.call(vid, function (item) {
+        item.addEventListener('mouseover', hovervideo, false);
+        item.addEventListener('mouseout', hidevideo, false);
+      });
+      function hovervideo(e) {
+        var coverImg = e.target.parentNode.children[1];
+        coverImg.classList.add('hidden')
+        this.play();
+      }
+      function hidevideo(e) {
+        var coverImg = e.target.parentNode.children[1];
+        coverImg.classList.remove('hidden')
+        this.pause();
+      }
+    </script>
+    <div class="video-wrapper">
+      <video loop data-play="Hover"
+        poster="https://phantom-marca.unidadeditorial.es/1b9abaf928d57facd57f4189907c091d/resize/1320/f/jpg/assets/multimedia/imagenes/2021/09/02/16305820546830.jpg"
+        height="200px" width="200px" muted="muted">
+        <source src="https://youtu.be/To_kVMMu-Ls" type="video">
+      </video>
+      <img class="cover-img hidden"
+        src="https://phantom-marca.unidadeditorial.es/1b9abaf928d57facd57f4189907c091d/resize/1320/f/jpg/assets/multimedia/imagenes/2021/09/02/16305820546830.jpg"></img>
+    </div>
+    <script type="text/javascript">
+      var vid = document.getElementsByTagName("video");
+      [].forEach.call(vid, function (item) {
+        item.addEventListener('mouseover', hovervideo, false);
+        item.addEventListener('mouseout', hidevideo, false);
+      });
+      function hovervideo(e) {
+        var coverImg = e.target.parentNode.children[1];
+        coverImg.classList.add('hidden')
+        this.play();
+      }
+      function hidevideo(e) {
+        var coverImg = e.target.parentNode.children[1];
+        coverImg.classList.remove('hidden')
+        this.pause();
+      }
+    </script>
+    <div class="video-wrapper">
+      <video loop data-play="Hover" poster="https://www.formulatv.com/images/series/posters/1100/1112/dest_3.jpg"
+        height="200px" width="200px" muted="muted">
+        <source src="Videos/LUCIFER 6ª Temporada Final (2021) _ Tráiler Oficial Doblado Español Latino [HD].mp4"
+          type="video/mp4">
+      </video>
+      <img class="cover-img hidden" src="https://www.formulatv.com/images/series/posters/1100/1112/dest_3.jpg"></img>
+    </div>
+    <script type="text/javascript">
+      var vid = document.getElementsByTagName("video");
+      [].forEach.call(vid, function (item) {
+        item.addEventListener('mouseover', hovervideo, false);
+        item.addEventListener('mouseout', hidevideo, false);
+      });
+      function hovervideo(e) {
+        var coverImg = e.target.parentNode.children[1];
+        coverImg.classList.add('hidden')
+        this.play();
+      }
+      function hidevideo(e) {
+        var coverImg = e.target.parentNode.children[1];
+        coverImg.classList.remove('hidden')
+        this.pause();
+      }
+    </script>
+    <div class="video-wrapper">
+      <video loop data-play="Hover" poster="https://www.formulatv.com/images/series/posters/1400/1471/dest_1.jpg"
+        height="200px" width="200px" muted="muted">
+        <source src="Videos/Good Girls.mp4" type="video/mp4">
+      </video>
+      <img class="cover-img hidden" src="https://www.formulatv.com/images/series/posters/1400/1471/dest_1.jpg"></img>
+    </div>
+    <script type="text/javascript">
+      var vid = document.getElementsByTagName("video");
+      [].forEach.call(vid, function (item) {
+        item.addEventListener('mouseover', hovervideo, false);
+        item.addEventListener('mouseout', hidevideo, false);
+      });
+      function hovervideo(e) {
+        var coverImg = e.target.parentNode.children[1];
+        coverImg.classList.add('hidden')
+        this.play();
+      }
+      function hidevideo(e) {
+        var coverImg = e.target.parentNode.children[1];
+        coverImg.classList.remove('hidden')
+        this.pause();
+      }
+    </script>
+    <div class="video-wrapper">
+      <video loop data-play="Hover"
+        poster="https://occ-0-1068-92.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABacl0puJxZD5qa9QpH1AIeEctqtOSgR-C2bu91nezvXTWSIjdEzEWbKSgdyevd4S8L-Je7uLr14mpjYSnwu4_VJABI-sa7wMctOfQ60UyDgF_0EeffsNnrvepvPJbQ.jpg?r=360"
+        height="200px" width="200px" muted="muted">
+        <source src="Videos/Punto de Inflexión_ El 11S y la Guerra contra el Terrorismo_ Trailer Oficial.mp4"
+          type="video/mp4">
+      </video>
+      <img class="cover-img hidden"
+        src="https://occ-0-1068-92.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABacl0puJxZD5qa9QpH1AIeEctqtOSgR-C2bu91nezvXTWSIjdEzEWbKSgdyevd4S8L-Je7uLr14mpjYSnwu4_VJABI-sa7wMctOfQ60UyDgF_0EeffsNnrvepvPJbQ.jpg?r=360"></img>
+    </div>
+    <script type="text/javascript">
+      var vid = document.getElementsByTagName("video");
+      [].forEach.call(vid, function (item) {
+        item.addEventListener('mouseover', hovervideo, false);
+        item.addEventListener('mouseout', hidevideo, false);
+      });
+      function hovervideo(e) {
+        var coverImg = e.target.parentNode.children[1];
+        coverImg.classList.add('hidden')
+        this.play();
+      }
+      function hidevideo(e) {
+        var coverImg = e.target.parentNode.children[1];
+        coverImg.classList.remove('hidden')
+        this.pause();
+      }
+    </script>
+    <div class="video-wrapper">
+      <video loop data-play="Hover"
+        poster="https://i0.wp.com/hipertextual.com/wp-content/uploads/2021/08/clickbait-netflix-_crop1629825109480.jpg_1902800913.jpg?fit=1500%2C1125&ssl=1"
+        height="200px" width="200px" muted="muted">
+        <source src="Videos/Clickbait (2021) Netflix Serie Tráiler Oficial Subtitulado.mp4" type="video/mp4">
+      </video>
+      <img class="cover-img hidden"
+        src="https://i0.wp.com/hipertextual.com/wp-content/uploads/2021/08/clickbait-netflix-_crop1629825109480.jpg_1902800913.jpg?fit=1500%2C1125&ssl=1"></img>
+    </div>
+    <script type="text/javascript">
+      var vid = document.getElementsByTagName("video");
+      [].forEach.call(vid, function (item) {
+        item.addEventListener('mouseover', hovervideo, false);
+        item.addEventListener('mouseout', hidevideo, false);
+      });
+      function hovervideo(e) {
+        var coverImg = e.target.parentNode.children[1];
+        coverImg.classList.add('hidden')
+        this.play();
+      }
+      function hidevideo(e) {
+        var coverImg = e.target.parentNode.children[1];
+        coverImg.classList.remove('hidden')
+        this.pause();
+      }
+    </script>
+    <div class="video-wrapper">
+      <video loop data-play="Hover"
+        poster="https://www.quever.news/u/fotografias/m/2021/4/21/f1280x720-9195_140870_8223.jpg" height="200px"
+        width="200px" muted="muted">
+        <source src="Videos/SEX EDUCATION Temporada 3 Tráiler Español Latino Subtitulado (2021).mp4" type="video/mp4">
+      </video>
+      <img class="cover-img hidden"
+        src="https://www.quever.news/u/fotografias/m/2021/4/21/f1280x720-9195_140870_8223.jpg"></img>
+    </div>
+    <script type="text/javascript">
+      var vid = document.getElementsByTagName("video");
+      [].forEach.call(vid, function (item) {
+        item.addEventListener('mouseover', hovervideo, false);
+        item.addEventListener('mouseout', hidevideo, false);
+      });
+      function hovervideo(e) {
+        var coverImg = e.target.parentNode.children[1];
+        coverImg.classList.add('hidden')
+        this.play();
+      }
+      function hidevideo(e) {
+        var coverImg = e.target.parentNode.children[1];
+        coverImg.classList.remove('hidden')
+        this.pause();
+      }
+    </script>
+  </section>
+  <!--Abrir Mi lista-->
+  <section id="Lista">
+    <div id="Botón">
+      <input type="button" value="Mi lista" onClick="document.getElementById('oculto').style=visibility='visible' ">
+      <div id="oculto" style="visibility:hidden">
+        <section class="fila1">
+          <!--Fila 1-->
+          <div class="gallery">
+            <a target="_blank" href="https://www.netflix.com/uy/Title/81040344">
+              <img src="https://www.formulatv.com/images/series/posters/2600/2653/dest_1.jpg" alt="elite" width="200px"
+                height="200px">
+            </a>
+            <div class="desc" style="font-size: px;">Cientos de personas con dificultades económicas aceptan una extraña
+              invitación a un juego de supervivencia. Les espera un premio millonario, pero hay mucho en juego.</div>
+          </div>
+          <div class="gallery">
+            <a target="_blank" href="https://www.netflix.com/uy/title/81021245">
+              <img src="https://pics.filmaffinity.com/Control_Z_Serie_de_TV-565849715-large.jpg" alt="Northern Lights"
+                width="200px" height="300px">
+            </a>
+            <div class="desc" style="font-size: 15px;">Control Z empieza cuando después de que un hacker comience a
+              revelar los secretos más intimos de todos los estudiantes de la escuela del Colegio Nacional, incluidos
+              los que están más arriba del orden social.
+              Es entonces cuando empieza a venirse abajo todo lo que estaba arriba y a subir como la espuma todo lo que
+              se encontraba hundido. Los jóvenes más populares de esta prestigiosa escuela son acosados y los que
+              estaban marginados, ahora ganan estatus entre todos los alumnos. </div>
+          </div>
+          <div class="gallery">
+            <a target="_blank" href="https://www.netflix.com/uy/title/81002370">
+              <img src="https://es.web.img2.acsta.net/pictures/21/01/04/12/12/0170975.jpg" alt="Forest" width="200px"
+                height="200px">
+            </a>
+            <div class="desc" style="font-size: 15px;">Cobra Kai es la secuela de la famosa saga cinematográfica Karate
+              Kid. La serie sigue la historia 30 años después del campeonato de 1984, en el que Johnny no se encuentra
+              en el mejor momento de su vida por lo que decide volver a abrir el famoso Dojo Cobra Kai para darle un
+              giro. Es ahí cuando se reencuentra con Daniel, ahora convertido en un hombre de éxito, pero sin la ayuda
+              de Miyagi, no logra encontrar el equilibrio en su vida.</div>
+          </div>
+          <div class="gallery">
+            <a target="_blank" href="https://www.netflix.com/uy/title/80197526">
+              <img src="https://www.cinemascomics.com/wp-content/uploads/2020/01/17b5648dc97c211f2d85b1d91b40dce0.jpg"
+                alt="Northern Lights" width="200px" height="200px">
+            </a>
+            <div class="desc" style="font-size:15px">Sex Education es una serie de televisión web británica de comedia
+              dramática, creada por Laurie Nunn, que se estrenó el 11 de enero de 2019 en Netflix. Está protagonizada
+              por Gillian Anderson, Asa Butterfield, Emma Mackey, Ncuti Gatwa, Connor Swindells y Kedar
+              Williams-Stirling.</div>
+        </section>
+        <section class="fila2">
+          <!--Fila 2-->
+          <div class="gallery">
+            <a target="_blank" href="https://www.netflix.com/uy/title/80200942">
+              <img src="https://th.bing.com/th/id/OIP.DNLh8THJDrYgjG2f5FG_KwHaNJ?pid=ImgDet&rs=1" alt="Forest"
+                width="200px" height="200px">
+            </a>
+            <div class="desc" style="font-size: 15px;">Élite narra la vida de un grupo de estudiantes de un exclusivo
+              colegio privado, al que llegan tres nuevos alumnos becados de clase humilde, provocando una confrontación
+              entre ricos y pobres que desemboca en asesinatos y desapariciones de alumnos. La serie explora diversos
+              conceptos asociados con los dramas adolescentes.</div>
+          </div>
+          <div class="gallery">
+            <a target="_blank" href="https://www.netflix.com/uy/title/80133311">
+              <img src="https://i.pinimg.com/originals/d3/82/e7/d382e7ca91e0c07cb14c5a08a4d164d1.jpg" alt="Forest"
+                width="200px" height="200px">
+            </a>
+            <div class="desc" style="font-size: 15px;">Riverdale es una serie de televisión estadounidense de drama
+              basada en los personajes de Archie Comics. La serie fue adaptada para The CW por el director creativo de
+              Archie Comics, Roberto Aguirre-Sacasa, y es producida por Warner Bros. Television y CBS Television
+              Studios, en asociación con Berlanti Productions y Archie Comics. Originalmente concebida como una
+              adaptación cinematográfica para Warner Bros.</div>
+          </div>
+          <div class="gallery">
+            <a target="_blank" href="https://www.netflix.com/uy/title/80057918">
+              <img src="https://spoilertime.com/wp-content/uploads/2019/05/poster-lucifer-netflix-780x1156.jpg"
+                alt="Forest" width="200px" height="200px">
+            </a>
+            <div class="desc" style="font-size: 15px;">Lucifer es una serie de televisión estadounidense desarrollada
+              por Tom Kapinos que se estrenó en Estados Unidos en Fox el 25 de enero de 2016. Se basa en el personaje de
+              DC Comics creado por Neil Gaiman, Sam Kieth y Mike Dringenberg tomado de la serie de cómics The Sandman,
+              quien más tarde se convirtió en el protagonista de una serie de cómics derivada, ambos publicados por la
+              imprenta Vertigo de DC Comics.</div>
+          </div>
+          <div class="gallery">
+            <a target="_blank" href="https://www.netflix.com/uy/title/80057281">
+              <img src="https://th.bing.com/th/id/R.9d5259637b9b947358205fbca37b6987?rik=UWZRGU29kCsweA&pid=ImgRaw&r=0"
+                alt="Forest" width="200px" height="200px">
+            </a>
+            <div class="desc" style="font-size: 15px;">Stranger Things es una serie de televisión web estadounidense de
+              suspenso y ciencia ficción coproducida y distribuida por Netflix. Escrita y dirigida por los hermanos Matt
+              y Ross Duffer y producida ejecutivamente por Shawn Levy, fue estrenada en la plataforma Netflix el 15 de
+              julio de 2016, con críticas positivas por parte de la prensa especializada, quienes elogiaron la
+              interpretación, caracterización, ritmo, atmósfera y el claro homenaje al Hollywood de la década de 1980,
+              con referencias a películas de Steven Spielberg, Wes Craven, John Carpenter, Stephen King, Rob Reiner y
+              George Lucas, entre otros, incluyendo varias películas, anime y videojuegos.</div>
+          </div>
+        </section>
+
+        <!--Cerrar Mi lista-->
+        <input type="button" value="Cerrar" onClick="document.getElementById('oculto').style.display='none '">
+      </div>
+      </main>
+
+      <fotter class="footer">
+        <div class="divisor">
+          <div class="footer-info">
+            <p>Preguntas? Llama <a href="+598999999">+598999999 (UY)</a></p>
+            <ul class="footer-links">
+
+              <div class="21">
+                <li class="footer-links_item"><a href="#">Preguntas frecuentes</a></li>
+                <li class="footer-links_item"><a href="#">Prensa</a></li>
+                <li class="footer-links_item"><a href="#">Formas de ver</a></li>
+                <li class="footer-links_item"><a href="#">Preferencias de cookies</a></li>
+                <li class="footer-links_item"><a href="#">Prueba de velocidad</a></li>
+              </div>
+              <div class="2">
+                <li class="footer-links_item"><a href="#">Centro de ayuda</a></li>
+                <li class="footer-links_item"><a href="#">Relaciones con invercionistas</a></li>
+                <li class="footer-links_item"><a href="#">Terminos de uso</a></li>
+                <li class="footer-links_item"><a href="#">Información corporativa</a></li>
+                <li class="footer-links_item"><a href="#">Avisos legales</a></li>
+              </div>
+              <div class="3">
+                <li class="footer-links_item"><a href="#">Cuenta</a></li>
+                <li class="footer-links_item"><a href="#">Empleo</a></li>
+                <li class="footer-links_item"><a href="#">Privacidad</a></li>
+                <li class="footer-links_item"><a href="#">Contáctanos</a></li>
+                <li class="footer-links_item"><a href="#">Solo en Flexin</a></li>
+              </div>
+
+            </ul>
+
+          </div>
+          <p>
+            &copy;Flexin Uruguay by Matea 2021
+          </p>
+          <div class="social">
+            <a href="https://www.facebook.com/matea.social/">
+              <img src="https://cdn-icons-png.flaticon.com/128/174/174848.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/matea.social/?hl=es-la">
+              <img src="https://cdn-icons-png.flaticon.com/128/174/174855.png" alt="Instagram">
+            </a>
+            <a href="https://www.youtube.com/watch?v=TWsN2ZrmibU">
+              <img src="https://cdn-icons-png.flaticon.com/128/174/174883.png" alt="Youtube">
+            </a>
+          </div><br>
+
+        </div>
+      </fotter>
+      <script src="principal.js"></script>
+</body>
+
+</html>

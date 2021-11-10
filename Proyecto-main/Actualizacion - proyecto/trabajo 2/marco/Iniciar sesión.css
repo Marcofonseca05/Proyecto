@@ -1,0 +1,11 @@
+.formulario{
+    background-color: rgba(0, 0, 0, 0.815);
+    border-radius: 10px;
+    text-align: center;
+    margin: 0px 0px;
+    padding: 20px 0px 60px;
+    color: crimson; }
+    header{
+        background-image:url(https://img.microsiervos.com/Peliculas-Ready-Player-One.jpg);
+        background-size: 100vh;
+        height: 100vh;}  

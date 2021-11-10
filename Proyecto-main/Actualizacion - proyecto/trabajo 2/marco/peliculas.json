@@ -1,0 +1,54 @@
+[
+    {
+        "nombre": "Son como Niños",
+        "Lanzamiento": 2006,
+        "genero": "comedia",
+        "actores": "pepe y juana",
+        "Director": "KOIL"
+    },
+    {
+        "nombre": "Mak",
+        "edad": 37,
+        "curso": "React Native"
+    },
+    {
+        "nombre": "Lius",
+        "edad": 51,
+        "curso": "Bash"
+    },
+    {
+        "nombre": "Ad",
+        "edad": 205,
+        "curso": "Algoritmos"
+    },
+    {
+        "nombre": "Grce",
+        "edad": 115,
+        "curso": "Cobol"
+    },
+    {
+        "nombre": "Stve",
+        "edad": 66,
+        "curso": "Tipografía"
+    },
+    {
+        "nombre": "Bil",
+        "edad": 66,
+        "curso": "Ofimática-Word"
+    },
+    {
+        "nombre": "Jef",
+        "edad": 57,
+        "curso": "Comercio Internacional"
+    },
+    {
+        "nombre": "Jen",
+        "edad": 93,
+        "curso": "Programación"
+    },
+    {
+        "nombre": "Magaret",
+        "edad": 35,
+        "curso": "Astronomía"
+    }
+]

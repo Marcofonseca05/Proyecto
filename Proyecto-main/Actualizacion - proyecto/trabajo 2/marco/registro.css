@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+
+
+*,
+*::after,
+*::before{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+/*Media */
+@media (max-width: 740px){
+    body {
+       text-align: center; 
+    }
+    .footer-links{
+        margin:auto
+    }
+    
+  }
+
+/*LOGOTIPO*/
+.logotipo{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 40px;
+    margin-top: px;
+    color: rgb(255, 38, 0);
+    text-shadow: rgb(3, 3, 3) 0px 3px 0px ;
+    z-index: 100;
+}
+@media (max-width: 740px){
+    .logotipo{
+        width: 180px;
+        
+    }
+  }
+
+.login-page{
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.507),rgba(0, 0, 0, 0.363)),url(http://3.bp.blogspot.com/-qdAyiO_0z9w/UnqjT3luSBI/AAAAAAAAAPI/tnGX2IfE5IU/s1600/Caratulas-de-peliculas.jpg);
+    background-position: top;
+    min-width: 100%;
+    min-height: 100%;
+    
+}
+@media (max-width: 460px){
+    .fondo{
+        display: -moz-box;
+        
+    }
+    .signin{
+        background-color: #000;
+    }
+  }
+@media (max-width: 740px){
+    .fondo{
+        background-color:black ;
+        margin:0 auto -236px;
+    }
+  }
+
+.signin {
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.842);
+    border-radius: 5px;
+    color: #fff;
+    margin: 40px auto 100px;
+    padding: 70px 60px 150px;
+    width: 450px;
+}
+@media (max-width: 740px){
+    .signin{
+        background-color: transparent;
+        margin: 1;
+        padding:70px 40px 90px;
+        border-bottom: 1px solid gray;
+    }
+    
+  }
+.signin h2{
+    margin: 0 0 25px;
+    font-size: 30px;
+
+}
+.signin input{
+    display: block;
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+}
+.signin input[type="email"],
+.signin input[type="text"],
+.signin input[type="password"]{
+    background-color:#353535 ;
+    font-size: 15px;
+    outline: none;
+    margin-bottom: 20px;
+    padding:0 20px;   
+}
+.signin input[type="email"] ::-webkit-input-placeholder
+.signin input[type="text"] ::-webkit-input-placeholder
+.signin input[type="password"]::-webkit-input-placeholder {
+    color: #949494;
+    font-size: 16px;
+}
+
+.signin input[type="submit"]{
+    background-color: red;
+    font-size: 16px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+.signin .help{
+    color: #949494;
+    margin-top: 12px;
+    padding: 0;
+    font-size: 13px;
+    display: flex;
+    justify-content:space-between ;
+}
+
+.signin .help .check {
+    display: flex;
+    align-items: center;
+}
+.check input{
+    width: 200px;
+    height: 20px;
+}
+.check label{
+    margin-left: 5px;
+    width: 100%;
+}
+.help .need a{
+    text-decoration: none;
+    color: #949494;
+}
+
+.help .need a:hover{
+    text-decoration: underline;
+}
+
+footer.signin{
+    margin-top: 30px;
+}
+
+.footer .signin .login {
+    text-decoration: none;
+    color: #727272;
+    font-size: 13px;
+}
+.login .facebook{
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.footer .signin .new{
+    margin-top: 12px;
+    font-size: 17px;
+    color: #727272;
+    font-weight: lighter;
+}
+.footer-signin .new a{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 5px;
+}
+.footer-signin .new a:hover{
+    text-decoration: underline;
+}
+
+.footer-signin .protect{
+    margin-top: 12px;
+    font-size: 13px;
+    color: #9b9b9b;
+}
+.footer-signin .protect a{
+    text-decoration: none;
+    color: #5656ff;
+}
+
+
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer-info{
+    background-color: rgba(0, 0, 0, 0.699);
+    max-width:1000px;
+    margin: auto;
+    
+}
+.footer-info p {
+    color:gray;
+}
+.footer-info p a {
+    color: inherit;
+    text-decoration: none;
+}
+.footer-links {
+    margin: 20px 0;
+    display:flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.footer-links_item{
+    width: 250px;
+    min-width: 200px;
+}
+.footer-links_item a{
+    color: gray;
+    font-size: 13px;
+    margin: bottom 10px;
+    text-decoration: none;
+}
+.footer-links_item a:hover{
+    color: rgb(255, 7, 7);
+    font-size: 13px;
+    margin: bottom 10px;
+    text-decoration: underline;
+}
+.footer-info select{
+    background-color: #000;
+    border: 1px solid rgba(128,128,128, .466);
+    color: gray;
+    outline: none;
+    padding: 13px;
+}
+
+
+/*Formulario de Registro*/

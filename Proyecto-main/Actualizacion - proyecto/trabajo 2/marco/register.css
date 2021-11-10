@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@media screen and (max-width:1200px) {
+    
+}
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    background-color: #333;
+}
+.fondo{
+    background: rgba(2, 2, 2, 0.5);
+}
+header{
+    background-image:url(https://img.microsiervos.com/Peliculas-Ready-Player-One.jpg);
+    background-size: 100vh;
+    height: 100%;  
+   
+}
+
+/*LOGOTIPO*/
+.logotipo{
+    font-family: 'Bebas Neue', cursive;
+    padding: 20px ;
+    font-size: 40px;
+    color: rgb(255, 38, 0);
+    text-shadow: rgb(3, 3, 3) 0px 3px 0px ;
+}
+
+/*Formulario de Registro*/
+.contentform{
+    padding: 30vh;
+}
+.formulario{
+    background-color: rgba(0, 0, 0, 0.815);
+    border-radius: 10px;
+    text-align: center;
+    margin: 0px 0px;
+    padding: 20px 0px 60px;
+    
+
+
+}
+input{
+    display: -ms-grid;
+    background-color: rgb(255, 255, 255);
+    border: black 2px solid;
+    color: rgb(0, 0, 0) ;
+    padding: 18px;
+
+}
+
+
+label {
+    color: white;
+    
+   
+
+}
