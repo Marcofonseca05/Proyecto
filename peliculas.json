@@ -1,0 +1,82 @@
+{"pelis": [
+    {
+        "nombre": "Son como Niños",
+        "Lanzamiento": 2006,
+        "genero": "comedia",
+        "actores": "pepe y juana",
+        "imagen":"crear-avatares-whatsapp.png",
+        "Director": "KOIL"
+    },
+    
+   
+    {
+        "nombre": "La mujer en la ventana ",
+        "Lanzamiento": 2020,
+        "genero": "suspenso",
+        "actores": "Amy Adams,Wyatt Russell",
+        "imagen":"Logo-F.png",
+        "Director": "Joe Wright"
+    },
+    {"nombre": "Oxígeno",
+        "Lanzamiento": 2021,
+        "genero": "supervivencia",
+        "actores": "Mélanie Laurent, Malik Zidi, Marc Saez, Eric Herson-Macarel",
+        "Director": "Alexandre Aja"
+       
+    },
+    
+    {
+        "nombre": "Nadie sale con vida",
+        "Lanzamiento": 2021,
+        "genero": "suspenso",
+        "actores": "Cristina Rodlo ",
+        "Director": "David Figlioli"
+    },
+    {   "nombre": "La Isla negra",
+        "Lanzamiento": 2021,
+        "genero": "supervivencia",
+        "actores": "Hanns Zischler, Nicole Mercedes Müller, Alice Dwyer, Sammy Scheuritzel,",
+        "Director": "Miguel Alexandre"   },
+    
+    {   
+        "nombre": "Distancia de rescate ",
+        "Lanzamiento": 2021,
+        "genero": "suspenso",
+        "actores": "María Valverde, Dolores Fonzi, Guillermo Pfening, ",
+        "Director": "Claudia Llosa"
+    },
+    { 
+        "nombre": "Mudanza Mortal ",
+        "Lanzamiento": 2021,
+        "genero": "suspenso",
+        "actores": "Ashley Greene",
+        "Director": "Peter Winther"
+        
+    },
+    {
+       
+        "nombre": "Bajo cero ",
+        "Lanzamiento": 2021,
+        "genero": "suspenso",
+        "actores": "Javier Gutiérrez, Karra Elejalde, Luis Callejo, ",
+        "Director": "Lluís Quílez"
+    },
+    {
+        
+        "nombre": "Cielo Rojo  ",
+        "imagen":"crear-avatares-whatsapp.png",
+        "Lanzamiento": 2021,
+        "genero": "suspenso",
+        "actores": "Peri Baumeister, Alexander Scheer, Graham McTavish",
+        "Director": " Peter Thorwarth"
+    },
+    {
+       
+        "nombre": "Venom 2",
+        "Lanzamiento": 2021,
+        "genero": "Fantástico. Acción.",
+        "actores": "Tom Hardy, Michelle Williams, Woody Harrelson,, ",
+        "Director": ": Andy Serkis"
+    }
+]
+}
