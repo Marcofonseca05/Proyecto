@@ -1,5 +1,6 @@
 {"pelis": [
     {
+        "id":"1",
         "nombre": "Son como Niños",
         "Lanzamiento": 2006,
         "genero": "comedia",
@@ -10,7 +11,7 @@
     },
     
    
-    {
+    {   "id":"2",
         "nombre": "Raya y el último dragón",
         "Lanzamiento": 2021,
         "genero": "Infantil/Fantasía",
@@ -19,7 +20,10 @@
         "Director": "Carlos López Estrada, Don Hall",
         "Rancking": "4"
     },
-    {"nombre": "Oxígeno",
+      
+    {
+        "id":"3",
+        "nombre": "Oxígeno",
         "Lanzamiento": 2021,
         "genero": "supervivencia",
         "actores": "Mélanie Laurent, Malik Zidi, Marc Saez, Eric Herson-Macarel",
@@ -30,6 +34,7 @@
     },
     
     {
+        "id":"4",
         "nombre": "Mujer Maravilla 1984",
         "Lanzamiento": 2020,
         "genero": "Fantasia",
@@ -38,7 +43,8 @@
         "Director": "Patty Jenkins",
         "Rancking": "4"
     },
-    {   "nombre": "Step Up Revolution",
+    {    "id":"5",
+         "nombre": "Step Up Revolution",
         "Lanzamiento": 2012,
         "genero": "Musical",
         "actores": "Ryan Guzman (Sean) y Kathryn McCormick (Emily)",
@@ -46,7 +52,8 @@
         "Director": "Scott Speer",
         "Rancking": "4"
     },
-    {   "nombre": "Distancia de rescate ",
+    {   "id":"6",
+         "nombre": "Distancia de rescate ",
         "Lanzamiento": 2021,
         "genero": "psicológico",
         "actores": "María Valverde, Dolores Fonzi, Guillermo Pfening, ",
@@ -54,7 +61,7 @@
         "Director": "Claudia Llosa",
         "Rancking": "9"
     },
-    { 
+    {    "id":"7",
         "nombre": "Mudanza Mortal ",
         "Lanzamiento": 2021,
         "genero": "terror",
@@ -65,7 +72,7 @@
         
     },
     {
-       
+        "id":"8",
         "nombre": "Bajo cero ",
         "Lanzamiento": 2021,
         "genero": "Acción",
@@ -75,7 +82,7 @@
         "Rancking": "4"
     },   
     {
-        
+        "id":"9",
         "nombre": "Sky Rojo",
         "Lanzamiento": 2021,
         "genero": "Drama",
@@ -85,7 +92,7 @@
         "Rancking": "6"
     },
     {
-       
+        "id":"10",
         "nombre": "JOBS",
         "Lanzamiento": 2013,
         "genero": "documental",
