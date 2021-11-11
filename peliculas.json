@@ -3,80 +3,96 @@
         "nombre": "Son como Niños",
         "Lanzamiento": 2006,
         "genero": "comedia",
-        "actores": "pepe y juana",
-        "imagen":"crear-avatares-whatsapp.png",
-        "Director": "KOIL"
+        "actores": "Adam Sandler (Lenny Feder), Kevin James (Eric Lamonsoff), Salma Hayek (Roxanne Chase-Feder) y David Spade (Marcus Higgins)",
+        "imagen":"https://pics.filmaffinity.com/Son_como_ni_os-567297059-large.jpg",
+        "Director": "Dennis Dugan",
+        "Rancking": "5"
     },
     
    
     {
-        "nombre": "La mujer en la ventana ",
-        "Lanzamiento": 2020,
-        "genero": "suspenso",
-        "actores": "Amy Adams,Wyatt Russell",
-        "imagen":"Logo-F.png",
-        "Director": "Joe Wright"
+        "nombre": "Raya y el último dragón",
+        "Lanzamiento": 2021,
+        "genero": "Infantil/Fantasía",
+        "actores": "Awkwafina(Sisu) y Kelly Marie Tran (Raya)",
+        "imagen":"https://pics.filmaffinity.com/Raya_y_el_ltimo_drag_n-458441308-large.jpg",
+        "Director": "Carlos López Estrada, Don Hall",
+        "Rancking": "4"
     },
     {"nombre": "Oxígeno",
         "Lanzamiento": 2021,
         "genero": "supervivencia",
         "actores": "Mélanie Laurent, Malik Zidi, Marc Saez, Eric Herson-Macarel",
-        "Director": "Alexandre Aja"
+        "imagen":"https://imagenes.gatotv.com/categorias/peliculas/posters/oxigeno.jpg",
+        "Director": "Alexandre Aja",
+        "Rancking": "4"
        
     },
     
     {
-        "nombre": "Nadie sale con vida",
-        "Lanzamiento": 2021,
-        "genero": "suspenso",
-        "actores": "Cristina Rodlo ",
-        "Director": "David Figlioli"
+        "nombre": "Mujer Maravilla 1984",
+        "Lanzamiento": 2020,
+        "genero": "Fantasia",
+        "actores": "Gal Gadot (Diana) y  Kristen Wiig (Cheetah)",
+        "imagen":"https://i.pinimg.com/originals/60/50/a7/6050a74fecf04ac8f27ccb4b11af5863.jpg",
+        "Director": "Patty Jenkins",
+        "Rancking": "4"
     },
-    {   "nombre": "La Isla negra",
+    {   "nombre": "Step Up Revolution",
+        "Lanzamiento": 2012,
+        "genero": "Musical",
+        "actores": "Ryan Guzman (Sean) y Kathryn McCormick (Emily)",
+        "imagen":"https://m.media-amazon.com/images/I/813ISifTeML._SL1500_.jpg",
+        "Director": "Scott Speer",
+        "Rancking": "4"
+    },
+    {   "nombre": "Distancia de rescate ",
         "Lanzamiento": 2021,
-        "genero": "supervivencia",
-        "actores": "Hanns Zischler, Nicole Mercedes Müller, Alice Dwyer, Sammy Scheuritzel,",
-        "Director": "Miguel Alexandre"   },
-    
-    {   
-        "nombre": "Distancia de rescate ",
-        "Lanzamiento": 2021,
-        "genero": "suspenso",
+        "genero": "psicológico",
         "actores": "María Valverde, Dolores Fonzi, Guillermo Pfening, ",
-        "Director": "Claudia Llosa"
+        "imagen":"https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRkY-JrCiVwH-JL0xg0KUw55MGGshiOx1QWPsoaBRqWFo3rFIFu",
+        "Director": "Claudia Llosa",
+        "Rancking": "9"
     },
     { 
         "nombre": "Mudanza Mortal ",
         "Lanzamiento": 2021,
-        "genero": "suspenso",
+        "genero": "terror",
         "actores": "Ashley Greene",
-        "Director": "Peter Winther"
+        "imagen":"https://1.bp.blogspot.com/-b3HQMMX6_lo/YPWEAPbe8OI/AAAAAAAADP0/58TmX08t-lwr-fR2DRGB8MrtYBFNJHhVQCLcBGAsYHQ/s1200/mudanza-mortal%2Bposter.jpeg",
+        "Director": "Peter Winther",
+        "Rancking": "7"
         
     },
     {
        
         "nombre": "Bajo cero ",
         "Lanzamiento": 2021,
-        "genero": "suspenso",
-        "actores": "Javier Gutiérrez, Karra Elejalde, Luis Callejo, ",
-        "Director": "Lluís Quílez"
-    },
+        "genero": "Acción",
+        "actores": "Javier Gutiérrez, Karra Elejalde, Luis Callejo",
+        "imagen":"https://i2.wp.com/noescinetodoloquereluce.com/wp-content/uploads/2020/07/bajocero.jpg?resize=800%2C1134&ssl=1",
+        "Director": "Lluís Quílez",
+        "Rancking": "4"
+    },   
     {
         
-        "nombre": "Cielo Rojo  ",
-        "imagen":"crear-avatares-whatsapp.png",
+        "nombre": "Sky Rojo",
         "Lanzamiento": 2021,
-        "genero": "suspenso",
+        "genero": "Drama",
         "actores": "Peri Baumeister, Alexander Scheer, Graham McTavish",
-        "Director": " Peter Thorwarth"
+        "imagen":"http://todotvnews.com/wp-content/uploads/2021/03/poster-sky-rojo.jpg",
+        "Director": " Peter Thorwarth",
+        "Rancking": "6"
     },
     {
        
-        "nombre": "Venom 2",
-        "Lanzamiento": 2021,
-        "genero": "Fantástico. Acción.",
-        "actores": "Tom Hardy, Michelle Williams, Woody Harrelson,, ",
-        "Director": ": Andy Serkis"
+        "nombre": "JOBS",
+        "Lanzamiento": 2013,
+        "genero": "documental",
+        "actores": "Michael Fassbender (Steve Jobs)",
+        "imagen":"https://i.blogs.es/011895/cartel_documental/1366_2000.jpg",
+        "Director":  "Danny Boyle",
+        "Rancking": "5"
     }
 ]
 }
