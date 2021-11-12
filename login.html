@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="iniciarsesion.js"></script>
+    <title>Inicia sesión</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <script> 
+             function ObtenerEmails(){
+                 var usuarios = JSON.parse(localStorage.getItem('usuarioss'))
+
+                 if (usuarios == ""){
+                     usuarios =["atilio.jorge@gmail.com", "Pablo.villanueva@gmail.com", "Pedro.julio@gmail.com", "agustin.bas@gmail.com"];
+                               ["atilio1234", "pablo1234", "pedro1234", "agustin1234"];
+                 }
+                 return usuarios;
+             }
+             function validarUsuario(correo, contraseña){
+                 var usuarios = ObtenerEmails();
+                 var Acceso = false;
+                
+                for(var i = 0; i< usuarios.length; i++){
+                    if(correo == usuarios[i][0] && contraseña== usuarios [i][0]){
+                        Acceso = true;
+                    }
+                }
+                return Acceso;
+            }
+           // const getValueInput = () =>{
+          //var inputValue = document.getElementById("name").value;
+          //var inputcontra = document.getElementById("password").value;
+          //localStorage.setItem("primeritem",inputValue);
+          //return false;
+            //}
+        
+            //console.log(Contraseñas)
+
+        //switch (Emails) {
+  //case "atilio.jorge@gmail.com":
+    // "atilio1234"
+    //document.write("Gracias")
+    //break;
+  //case 1: 
+ //Contraseñas[1] == "pablo1234"
+//document.write("Gracias")
+  //case 2: 
+    //Contraseñas[2] == "pedro1234"
+//document.write("Gracias")
+  //  break; 
+  //case 3:
+   // Contraseñas[2] == "agustin1234"
+//document.write("Gracias")    
+//break;
+  //default:
+    //console.log('default')
+
+      </script> 
+    <main class="regisrate">
+        </main>
+    <div class="Login-page">
+        <div class="fondo">
+            <header id="header">
+                <div class="logotipo">
+                    <p>NETFLIX</p>
+                    <p id="nashe"></p>
+                    <div class="signin">
+                        <h2 id="Bienvenida">Inicia sesión</h2>
+                        <form action="" class="siginn">
+                            <input type="text" name="name" id="name" placeholder="Email o número de teléfono" autocomplete="off" required>
+                            <input type="password" name="password" id="password" placeholder="Contraseña" autocomplete="off" required>
+                            <input type="submit" id="boton" onclick="getValueInput()">
+                        </form>
+                        <div class="help">
+                            <div class="check">
+                                <input type="checkbox" name="rememer" id="remember">
+                                <label for="remember">Recuérdame</label>
+                            </div>
+                            <div class="need">
+                                <a href="#">¿Necesitas ayuda?</a>
+                            </div>
+                        </div>
+                        <div class="footer-signin">
+                            <a href="#" class="login"><img src="https://cdn-icons-png.flaticon.com/128/733/733547.png" class="facebook"  width= "20px" alt="icono">iniciar sesión con Facebook</a>
+                            <p class="new">¿Primera vez en Flexin? <a href="registro.html">Suscribete ya</a></p>
+            
+                            <p class="protect">
+                                Esta página está protegida por Google reCAPTCHA para comprobar que no eres un robot. La información recopilada por Google reCAPTCHA <a href="#">Leer mas</a></p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <footer class="footer-info">
+                <p>Preguntas? Llama <a href="+598999999">+598999999 (uy)</a></p>
+                <ul class="footer-links">
+                    <li class="footer-links_item"><a href="#">Preguntas frecuentes</a></li>
+                    <li class="footer-links_item"><a href="#">Privacidad</a></li>
+                    <li class="footer-links_item"><a href="#">Preferencias de cookies</a></li>
+                    <li class="footer-links_item"><a href="#">Centro de ayuda</a></li>
+                    <li class="footer-links_item"><a href="#">Preferencias de cookies</a></li>
+                    <li class="footer-links_item"><a href="#">Relaciones con invercionistas</a></li>
+                    <li class="footer-links_item"><a href="#">Terminos de uso</a></li>
+                    <li class="footer-links_item"><a href="#">Información corporativa</a></li>
+                
+
+                </ul>
+                <select name="lenguage" id="lenguage">
+                    <option value="es">Español</option>
+                    <option value="en">Ingles</option>
+                </select>
+            </footer>    
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

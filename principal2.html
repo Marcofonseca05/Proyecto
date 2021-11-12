@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Flexin Uruguay </title>
+  <!--CSS-->
+  <!--Javascript-->
+  <script src="app.js"></script>
+  <!--Icono-->
+  <link href='https://css.gg/search.css' rel='stylesheet'>
+  <!-- icono -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+  integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+    <script>
+        document.getElementById("result").innerHTML=localStorage.getItem("primeritem");
+        </script>
+    <div class="nav">
+        <div class="nav__left">
+          <h2 class="nav_logo">Flexin</h2>
+        </div>
+        <div class="buscador">
+            
+            <center><input id="buscador" class="boton_placeholder" type="search" placeholder="Search"></center>
+    
+        </div>
+
+        <div class="nav__right">
+          <img src="avatar.png" class="nav_avatar" alt="">
+        </div>
+      </div>
+
+    <header id="banner">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="Juegocalamar.html">
+                <img src="https://wallpapercave.com/wp/wp9939661.jpg" class="d-block w-100" alt="..." width="100px"
+                  height="650px"></a>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Squid Game</h5>
+              </div>
+            </div>
+            
+            <div class="carousel-item">
+              <a href="Juegocalamar.html">
+                <img src="https://www.sonica.mx/u/fotografias/m/2021/9/22/f1280x720-11346_143021_5050.jpg" alt="..."
+                  width="1500px" height="650px"></a>
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <a href="Juegocalamar.html">
+                <img src="https://www.24-horas.mx/wp-content/uploads/2021/09/Agregar-un-titulo-3.png" alt="..."
+                  width="1500px" height="650px"></a>
+              <div class="carousel-caption d-none d-md-block">
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div><br>
+      </header>
+  <!-- navbar -->
+  <div class="nav">
+    <div class="nav__left">
+      <h2 class="nav_logo">Flexin</h2>
+    </div>
+          <!--<img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" class="avatar" withd="20px" alt=""> -->
+          <div id="acaPostre" class="row"></div>
+<br>
+<br>
+  <!--Botones-->
+  <!-- row -->
+  <div id="headrow">
+    <div class="row">
+      <h2 class="row__title"></h2>
+      <div class="row__posters"></div>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener("scroll", function () {
+
+      var nav = document.querySelector(".nav");
+      nav.classList.toggle("active", window.scrollY > 0);
+    })
+  </script>
+  <br>
+  <fotter class="footer">
+    <div class="divisor">
+      <div class="footer-info">
+        <p>Preguntas? Llama <a href="+598999999">+598999999 (UY)</a></p>
+        <ul class="footer-links">
+
+          <div class="21">
+            <li class="footer-links_item"><a href="#">Preguntas frecuentes</a></li>
+            <li class="footer-links_item"><a href="#">Prensa</a></li>
+            <li class="footer-links_item"><a href="#">Formas de ver</a></li>
+            <li class="footer-links_item"><a href="#">Preferencias de cookies</a></li>
+            <li class="footer-links_item"><a href="#">Prueba de velocidad</a></li>
+          </div>
+          <div class="2">
+            <li class="footer-links_item"><a href="#">Centro de ayuda</a></li>
+            <li class="footer-links_item"><a href="#">Relaciones con invercionistas</a></li>
+            <li class="footer-links_item"><a href="#">Terminos de uso</a></li>
+            <li class="footer-links_item"><a href="#">Información corporativa</a></li>
+            <li class="footer-links_item"><a href="#">Avisos legales</a></li>
+          </div>
+          <div class="3">
+            <li class="footer-links_item"><a href="#">Cuenta</a></li>
+            <li class="footer-links_item"><a href="#">Empleo</a></li>
+            <li class="footer-links_item"><a href="#">Privacidad</a></li>
+            <li class="footer-links_item"><a href="#">Contáctanos</a></li>
+            <li class="footer-links_item"><a href="#">Solo en Flexin</a></li>
+          </div>
+
+        </ul>
+
+      </div>
+      <p>
+        &copy;Flexin Uruguay by Matea 2021
+      </p>
+      <div class="social">
+        <a href="https://www.facebook.com/matea.social/">
+          <img src="https://cdn-icons-png.flaticon.com/128/174/174848.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/matea.social/?hl=es-la">
+          <img src="https://cdn-icons-png.flaticon.com/128/174/174855.png" alt="Instagram">
+        </a>
+        <a href="https://www.youtube.com/watch?v=TWsN2ZrmibU">
+          <img src="https://cdn-icons-png.flaticon.com/128/174/174883.png" alt="Youtube">
+        </a>
+      </div><br>
+
+    </div>
+  </fotter>
+
+</body>
+
+</html>
